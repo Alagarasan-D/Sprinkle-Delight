@@ -3,680 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprinkle Delight | Handmade Cakes</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/Sprinkledelight.jpg">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Sprinkle-Delight | Loading...</title>
+    <meta name="description" content="Welcome to Sprinkle-Delight - Your sweet experience is loading">
+    <link rel="preconnect" href="https://sprinkle-delight.netlify.app">
+    <link rel="dns-prefetch" href="https://sprinkle-delight.netlify.app">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2 > Sprinkle Delight</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cakes">Cakes</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="auth-buttons">
-                    <button class="login-btn" onclick="openModal('loginModal')" id="loginBtn">Login</button>
-                    <button class="signup-btn" onclick="openModal('signupModal')" id="signupBtn">Sign Up</button>
-                    <button class="profile-btn" onclick="openModal('profileModal')" id="profileBtn" style="display: none;">
-                        <i class="fas fa-user-circle"></i>
-                        <span id="profileName">Profile</span>
-                    </button>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Sprinkle Delight</h1>
-            <p>Handmade Cakes with Love & Care</p>
-            <p class="hero-subtitle">Fresh, Delicious, and Made to Order</p>
-        </div>
-    </section>
-
-    <!-- Featured Cakes Section -->
-    <section id="featured" class="featured-section">
-        <div class="container">
-            <h2>Featured Cakes</h2>
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <img src="images/Chocolate-Strawberry-Cake.jpg" alt="Chocolate Cake">
-                    <h3>Chocolate Cake</h3>
-                    <p>Rich and moist chocolate cake</p>
-                    
-                </div>
-                <div class="featured-card">
-                    <img src="images/Red Velvet Cake.jpg" alt="Red Velvet Cake">
-                    <h3>Red Velvet Cake</h3>
-                    <p>Classic red velvet with cream cheese</p>
-                    
-                </div>
-                <div class="featured-card">
-                    <img src="images/Black Forest Cake1.jpg" alt="Black Forest Cake">
-                    <h3>Black Forest Cake</h3>
-                    <p>Cherry and chocolate perfection</p>
-                   
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cakes Gallery Section -->
-    <section id="cakes" class="cakes-section">
-        <div class="container">
-            <h2>Our Cake Collection</h2>
-            <div class="category-filter">
-                <button class="filter-btn active" onclick="filterCakes('all')">All Cakes</button>
-                <button class="filter-btn" onclick="filterCakes('chocolate')">Chocolate</button>
-                <button class="filter-btn" onclick="filterCakes('fruit')">Fruit</button>
-                <button class="filter-btn" onclick="filterCakes('special')">Special</button>
-            </div>
-            <div class="cakes-grid" id="cakesGrid">
-                <!-- Cakes will be populated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose" class="why-choose-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="font-family: 'Times New Roman', Times, serif;">Why Choose Sprinkle Delight?</h2>
-                <div class="decorative-line"></div>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="stat-number" data-target="1">0</div>
-                    <div class="stat-label"  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " >Years of Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">Happy Customers</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="stat-number" data-target="99.9">0</div>
-                    <div class="stat-label"style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">Fresh Ingredients</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <div class="decorative-line"></div>
-                <p class="section-subtitle">From custom designs to home delivery, we provide comprehensive cake services to make your celebrations perfect and memorable.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Custom Cake Design</h3>
-                    <p>Personalized cakes designed according to your specific requirements and themes.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Any theme or design</li>
-                        <li><i class="fas fa-check"></i> Photo cakes available</li>
-                        <li><i class="fas fa-check"></i> Corporate branding</li>
-                        <li><i class="fas fa-check"></i> 3D cake sculptures</li>
-                    </ul>
-                    <button class="service-btn" onclick="openModal('contactModal')">Learn More</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3>Wedding Cakes</h3>
-                    <p>Elegant multi-tier wedding cakes that make your special day even more memorable.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Multi-tier designs</li>
-                        <li><i class="fas fa-check"></i> Fresh flower decorations</li>
-                        <li><i class="fas fa-check"></i> Fondant work</li>
-                        <li><i class="fas fa-check"></i> Cake cutting ceremony</li>
-                    </ul>
-                    <button class="service-btn" onclick="openModal('contactModal')">Learn More</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-birthday-cake"></i>
-                    </div>
-                    <h3>Birthday Specials</h3>
-                    <p>Fun and colorful birthday cakes for all ages, from kids to adults.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Character cakes</li>
-                        <li><i class="fas fa-check"></i> Number cakes</li>
-                        <li><i class="fas fa-check"></i> Photo printing</li>
-                        <li><i class="fas fa-check"></i> Surprise elements</li>
-                    </ul>
-                    <button class="service-btn" onclick="openModal('contactModal')">Learn More</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h3>Party Orders</h3>
-                    <p>Large quantity orders for parties, events, and corporate functions.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Bulk discounts</li>
-                        <li><i class="fas fa-check"></i> Multiple flavors</li>
-                        <li><i class="fas fa-check"></i> Event planning support</li>
-                        <li><i class="fas fa-check"></i> Setup assistance</li>
-                    </ul>
-                    <button class="service-btn" onclick="openModal('contactModal')">Learn More</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Same Day Delivery</h3>
-                    <p>Quick turnaround for urgent orders with same-day delivery service.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Express baking</li>
-                        <li><i class="fas fa-check"></i> Rush orders</li>
-                        <li><i class="fas fa-check"></i> Emergency cakes</li>
-                        <li><i class="fas fa-check"></i> Last-minute changes</li>
-                    </ul>
-                    <button class="service-btn" onclick="openModal('contactModal')">Learn More</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Home Delivery</h3>
-                    <p>Safe and secure delivery to your doorstep across Salem and nearby areas.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Temperature controlled</li>
-                        <li><i class="fas fa-check"></i> Careful handling</li>
-                        <li><i class="fas fa-check"></i> Timely delivery</li>
-                        <li><i class="fas fa-check"></i> Setup service</li>
-                    </ul>
-                    <button class="service-btn" onclick="openModal('contactModal')">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-header">
-                <h2>About Sprinkle Delight</h2>
-                <div class="decorative-line"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                   
-                    <div class="features">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Made with Love</h3>
-                                <p>Every cake is handcrafted with care and passion</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Fresh Ingredients</h3>
-                                <p>Only the finest and freshest ingredients sourced daily</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Fresh Daily</h3>
-                                <p>Baked fresh every day for maximum taste</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Quality Assured</h3>
-                                <p>Premium quality guaranteed in every bite</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-container">
-                        <img src="images/cake1.jpg" alt="Baker at work">
-                        <div class="image-overlay">
-                            <div class="overlay-content">
-                                <h4>Crafting Sweetness Since 2025</h4>
-                                <p>Over 500+ Happy Customers</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-user"></i>
-
-                        <!-- owner  -->
-                        <h3> Dhanalakshmi</h3>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                      <p><a class="area" href="tel:+917094930981" >+91 7094930981</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                         <p><a class="area" href="https://maps.app.goo.gl/YPzDrKoJkCsm6MHh8" target="_blank">
-Ayothiyapattinam, Salem<br>Tamil Nadu, India</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                     <p><a  class="area" href="https://wa.me/917094930981" target="_blank">Chat on WhatsApp</a></p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Your Phone" required>
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" style="font-family: 'Playfair Display', serif ;">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>🧁 Sprinkle Delight</h3>
-                    <p>Handmade cakes with love and care</p>
-                    <a href="https://www.instagram.com/_sprinkle_delight_?igsh=dXprNTFqdmJudHd0" style="font-size: 30px;padding: 30px;"><i class="fab fa-instagram"></i></a>
-                   <a href="https://m.youtube.com/@sprinkle_delights?si=Gp12_qzyjxNCiYI0&fbclid=PAY2xjawL1y1FleHRuA2FlbQIxMQABpy1cN7FGVOWOT54xUkKVyQj1vdfgMXz5gtXFR9oOzLN8LlErECd9ZXhZjHPk_aem_XAhvMtHvgmjDAiPRv5aKOA" style="font-size: 30px;padding: 30px;"> <i class="fab fa-youtube"></i></a>    <!-- YouTube -->
-                  <a href="https://wa.me/917094930981" target="_blank">  <i class="fab fa-whatsapp" style="font-size: 30px;padding: 30px;"></i> </a>  <!-- WhatsApp -->
-                  <a href="mailto:sprinkledelightcake@gmail.com"  target="_blank">  <i i class="fas fa-envelope"style="font-size: 30px;padding: 30px;"></i> </a>  <!-- WhatsApp -->
-
-
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#cakes">Cakes</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#" onclick="openModal('privacyModal')">Privacy Policy</a></li>
-                        <li><a href="#" onclick="openModal('termsModal')">Terms & Conditions</a></li>
-                        <li><a href="#" onclick="openModal('helpModal')">Help</a></li>
-                        <li><a href="#" onclick="openModal('feedbackModal')">Feedback</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>📞 <a href="tel:+917094930981">+91 7094930981</a></p>
-                    <p> 🔎BTR Nagar, Ayothiapattinam, Salem, Tamil Nadu 636103</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025-2026 Sprinkle Delight. All rights reserved.</p>
-                 <p class="design-credit">Designed by  <a href="https://dra-infotech-team.netlify.app/" id="spasaa">DAR Infotech Team.</a> </p>
-            </div>
-        </div>
-    </footer>
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content auth-modal">
-            <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <h2>Welcome Back</h2>
-            <p class="modal-subtitle">Sign in to your account</p>
-            <form id="loginForm">
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="input-group password-group">
-                    <input type="password" name="password" placeholder="Password" required>
-                    <button type="button" class="password-toggle" onclick="togglePassword(this)">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <button type="submit" class="auth-submit-btn">Sign In</button>
-            </form>
-            <p class="auth-switch">
-                Don't have an account? 
-                <a href="#" onclick="closeModal('loginModal'); openModal('signupModal')">Sign up</a>
-            </p>
-        </div>
+    <!-- Animated Sprinkles Background -->
+    <div class="sprinkles-container" aria-hidden="true">
+        <!-- Sprinkles will be generated by JavaScript -->
     </div>
 
-    <!-- Signup Modal -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content auth-modal">
-            <span class="close" onclick="closeModal('signupModal')">&times;</span>
-            <h2>Create Account</h2>
-            <p class="modal-subtitle">Join Sprinkle Delight today</p>
-            <form id="signupForm">
-                <div class="input-group">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="input-group">
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                </div>
-                <div class="input-group">
-                    <textarea name="address" placeholder="Address" required></textarea>
-                </div>
-                <div class="input-group password-group">
-                    <input type="password" name="password" placeholder="Password (min 6 characters)" required minlength="6">
-                    <button type="button" class="password-toggle" onclick="togglePassword(this)">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <div class="input-group password-group">
-                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
-                    <button type="button" class="password-toggle" onclick="togglePassword(this)">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <button type="submit" class="auth-submit-btn">Create Account</button>
-            </form>
-            <p class="auth-switch">
-                Already have an account? 
-                <a href="#" onclick="closeModal('signupModal'); openModal('loginModal')">Sign in</a>
-            </p>
-        </div>
-    </div>
+    <!-- Main Loading Container -->
+    <div class="loading-container">
+        <!-- Header -->
+        <header class="loading-header">
+            <h1 class="brand-title">
+                <span class="brand-text">Sprinkle</span>
+                <span class="brand-dash">-</span>
+                <span class="brand-text">Delight</span>
+            </h1>
+            <p class="brand-tagline">Your sweet experience awaits</p>
+        </header>
 
-    <!-- Profile Modal -->
-    <div id="profileModal" class="modal">
-        <div class="modal-content profile-modal-content">
-            <span class="close" onclick="closeModal('profileModal')">&times;</span>
-            
-            <div id="profileView">
-                <div class="profile-header">
-                    <div class="profile-avatar">
-                        <i class="fas fa-user-circle"></i>
+        <!-- Main Loading Area -->
+        <main class="loading-main">
+            <!-- Loading Animation Circle -->
+            <div class="loader-circle">
+                <div class="loader-inner">
+                    <div class="percentage-display">
+                        <span class="percentage-value" aria-live="polite">0</span>
+                        <span class="percentage-symbol">%</span>
                     </div>
-                    <h2 id="profileDisplayName">User Profile</h2>
-                    <p class="profile-email" id="profileDisplayEmail">user@example.com</p>
-                </div>
-                
-                <div class="profile-info">
-                    <div class="info-item">
-                        <label><i class="fas fa-user"></i> Full Name</label>
-                        <p id="profileInfoName">-</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <label><i class="fas fa-envelope"></i> Email</label>
-                        <p id="profileInfoEmail">-</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <label><i class="fas fa-phone"></i> Phone</label>
-                        <p id="profileInfoPhone">-</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <label><i class="fas fa-map-marker-alt"></i> Address</label>
-                        <p id="profileInfoAddress">-</p>
-                    </div>
-                </div>
-                
-                <div class="profile-actions">
-                    <button class="edit-profile-btn" onclick="showEditProfile()">
-                        <i class="fas fa-edit"></i> Edit Profile
-                    </button>
-                    <button class="logout-btn" onclick="logout()">
-                        <i class="fas fa-sign-out-alt"></i> Logout
-                    </button>
                 </div>
             </div>
-            
-            <div id="editProfileView" style="display: none;">
-                <h2>Edit Profile</h2>
-                <form id="editProfileForm">
-                    <div class="input-group">
-                        <label><i class="fas fa-user"></i> Full Name</label>
-                        <input type="text" id="editName" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label><i class="fas fa-envelope"></i> Email</label>
-                        <input type="email" id="editEmail" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label><i class="fas fa-phone"></i> Phone</label>
-                        <input type="tel" id="editPhone" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label><i class="fas fa-map-marker-alt"></i> Address</label>
-                        <textarea id="editAddress" required></textarea>
-                    </div>
-                    
-                    <div class="edit-actions">
-                        <button type="button" class="cancel-btn" onclick="cancelEdit()">
-                            <i class="fas fa-times"></i> Cancel
-                        </button>
-                        <button type="submit" class="save-btn">
-                            <i class="fas fa-save"></i> Save Changes
-                        </button>
-                    </div>
-                </form>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div class="status-container">
+                <p class="status-message" aria-live="polite">Initializing...</p>
+            </div>
+
+            <!-- Cancel Option -->
+            <div class="cancel-container">
+                <button class="cancel-button" id="cancelButton" aria-label="Skip loading and go directly to main site">
+                    Skip Loading
+                </button>
+            </div>
+        </main>
+
+        <!-- Footer with Network Status -->
+        <footer class="loading-footer">
+            <div class="network-status">
+                <span class="network-indicator"></span>
+                <span class="network-label" aria-live="polite">Connecting...</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Error Overlay -->
+    <div class="error-overlay hidden" id="errorOverlay">
+        <div class="error-container">
+            <div class="error-icon">⚠️</div>
+            <h2 class="error-title">Oops! Something went wrong</h2>
+            <p class="error-message">We're having trouble loading your sweet experience.</p>
+            <div class="error-actions">
+                <button class="btn btn--primary" id="retryButton">Try Again</button>
+                <a href="https://sprinkle-delight.netlify.app/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+                    Go to Main Site
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Other Modals (Privacy, Terms, Help, Feedback, Contact, Order) -->
-    <div id="privacyModal" class="modal"  style="font-family: 'Playfair Display', serif ;">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('privacyModal')">&times;</span>
-            <h2>Privacy Policy</h2>
-            <div class="modal-text">
-                <h3>Information We Collect</h3>
-                <p>We collect information you provide directly to us, such as when you create an account, place an order, or contact us.</p>
-                
-                <h3>How We Use Your Information</h3>
-                <p>We use the information we collect to provide, maintain, and improve our services, process orders, and communicate with you.</p>
-                
-                <h3>Information Sharing</h3>
-                <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent.</p>
-                
-                <h3>Data Security</h3>
-                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-                
-                <h3>Contact Us</h3>
-                <p>If you have any questions about this Privacy Policy, please contact us at <a href="tel:+917094930981">+91 7094930981</a>.</p>
-            </div>
-        </div>
-    </div>
+    <!-- Accessibility: Reduced Motion Preference -->
+    <div class="sr-only" aria-live="assertive" id="screenReaderUpdates"></div>
 
-    <div id="termsModal" class="modal"  style="font-family: 'Playfair Display', serif ;">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms & Conditions</h2>
-            <div class="modal-text">
-                <h3>Order Terms</h3>
-                <p>All orders must be placed at least 12 hours in advance. Custom orders may require additional time.</p>
-                
-                <h3>Payment Terms</h3>
-                <p>Payment is required at the time of order confirmation. We accept cash, UPI, and bank transfers.</p>
-                
-                <h3>Delivery Policy</h3>
-                <p>Delivery is available within Salem district. Delivery charges may apply based on location.</p>
-                
-                <h3>Cancellation Policy</h3>
-                <p>Orders can be cancelled up to 6 hours before the scheduled delivery time for a full refund.</p>
-                
-                <h3>Quality Guarantee</h3>
-                <p>We guarantee the freshness and quality of our cakes. If you're not satisfied, please contact us within 2 hours of delivery.</p>
-            </div>
-        </div>
-    </div>
+    <!-- Skip Link for Keyboard Users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div id="helpModal" class="modal"  style="font-family: 'Playfair Display', serif ;">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('helpModal')">&times;</span>
-            <h2>Help & Support</h2>
-            <div class="modal-text">
-                <h3>How to Place an Order</h3>
-                <p>1. Browse our cake collection<br>2. Select your desired cake<br>3. Choose size and quantity<br>4. Provide delivery details<br>5. Confirm your order via WhatsApp</p>
-                
-                <h3>Order Tracking</h3>
-                <p>You will receive updates about your order status via WhatsApp messages.</p>
-                
-                <h3>Custom Cakes</h3>
-                <p>We accept custom cake orders. Please contact us with your requirements and we'll provide a quote.</p>
-                
-                <h3>Frequently Asked Questions</h3>
-                <p><strong>Q: What are your operating hours?</strong><br>A: We operate from 9 AM to 8 PM, Monday to Sunday.</p>
-                
-                <p><strong>Q: Do you deliver on the same day?</strong><br>A: Same-day delivery is available for select cakes, subject to availability.</p>
-                
-                <h3>Contact Support</h3>
-                <p>For immediate assistance, call us at <a href="tel:+917094930981">+91 7094930981</a> or send a WhatsApp message.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="feedbackModal" class="modal"  style="font-family: 'Playfair Display', serif ;">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('feedbackModal')">&times;</span>
-            <h2>Feedback</h2>
-            <form id="feedbackForm">
-                <div class="rating">
-                    <h3>Rate Your Experience</h3>
-                    <div class="stars">
-                        <span class="star" data-rating="1">⭐</span>
-                        <span class="star" data-rating="2">⭐</span>
-                        <span class="star" data-rating="3">⭐</span>
-                        <span class="star" data-rating="4">⭐</span>
-                        <span class="star" data-rating="5">⭐</span>
-                    </div>
-                </div>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <select name="category" required>
-                    <option value="">Select Category</option>
-                    <option value="cake-quality">Cake Quality</option>
-                    <option value="delivery">Delivery Service</option>
-                    <option value="customer-service">Customer Service</option>
-                    <option value="website">Website Experience</option>
-                    <option value="other">Other</option>
-                </select>
-                <textarea name="feedback" placeholder="Your Feedback" required></textarea>
-                <button type="submit">Submit Feedback</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="contactModal" class="modal"  style="font-family: 'Playfair Display', serif ;">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('contactModal')">&times;</span>
-            <h2>Contact Us for Custom Services</h2>
-            <div class="modal-text">
-                <p>Thank you for your interest in our custom services! Please contact us directly to discuss your requirements:</p>
-                
-                <div class="contact-info-modal">
-                    <div class="contact-item-modal">
-                        <i class="fas fa-user"></i>
-                        <strong>Shobana Devi</strong>
-                    </div>
-                    <div class="contact-item-modal">
-                        <i class="fas fa-phone"></i>
-                        <span><a href="tel:+917094930981">+91 7094930981</a></span>
-                    </div>
-                    <div class="contact-item-modal">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp Available</span>
-                    </div>
-                    <div class="contact-item-modal">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span> <a href="https://www.google.com/maps/place/Ayothiapattinam,+Tamil+Nadu+636103/@11.6742969,78.2338656,16z/data=!4m6!3m5!1s0x3babf25cbe16fe2f:0x4138641d2c002947!8m2!3d11.6742551!4d78.235035!16zL20vMGYwNzl2?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D">Ayothiyapattinam, Salem, Tamil Nadu</a></span>
-                    </div>
-                </div>
-                
-                <p>We'll be happy to create a custom quote based on your specific needs and requirements.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('orderModal')">&times;</span>
-            <h2>Order Cake</h2>
-            <div id="orderDetails"></div>
-            <form id="orderForm">
-                <input type="text" name="customerName" placeholder="Your Name" required>
-                <input type="tel" name="customerPhone" placeholder="Your Phone" required>
-                <input type="email" name="customerEmail" placeholder="Your Email" required>
-                <textarea name="deliveryAddress" placeholder="Delivery Address" required></textarea>
-                <input type="date"  name="deliveryDate" required placeholder="deliveryDate">
-                <input type="time" name="deliveryTime" required placeholder="deliveryTime">
-                <select name="quantity" required>
-                    <option value="">Select Quantity</option>
-                    <option value="1">1 kg</option>
-                    <option value="2">2 kg</option>
-                    <option value="3">3 kg</option>
-                    <option value="4">4 kg</option>
-                    <option value="5">5 kg</option>
-                </select>
-                <textarea name="specialInstructions" placeholder="Special Instructions (Optional)"></textarea>
-                <button type="submit" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Confirm Your Order</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
