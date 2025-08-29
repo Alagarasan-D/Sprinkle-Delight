@@ -60,7 +60,7 @@ const cakes = [
         name: "Red Velvet Cake",
         price: 1100,
         mrp: 1300,
-        image:"images/Red Velvet Cake.jpg" ,
+        image:"/images/Red Velvet Cake.jpg" ,
         category: "special",
         description: "Classic red velvet with cream cheese frosting",
         rating: 4.7,
@@ -71,7 +71,7 @@ const cakes = [
         name: "White Forest Cake",
         price: 900,
         mrp: 1100,
-        image: "images/White Forest Cake.jpg",
+        image: "/images/White Forest Cake.jpg",
 
         category: "special",
         description: "White chocolate forest cake with cherries",
@@ -83,7 +83,7 @@ const cakes = [
         name: "Black Forest Cake",
         price: 900,
         mrp: 1100,
-        image: "images/Black Forest Cake.jpg",
+        image: "/images/Black Forest Cake.jpg",
 
         category: "chocolate",
         description: "Traditional black forest with cherries and cream",
@@ -880,4 +880,5 @@ window.addEventListener('load', () => {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
 });
